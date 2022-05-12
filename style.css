@@ -1,0 +1,126 @@
+:root {
+  --background: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 100%);
+  --button: hsl(258, 73%, 62%);
+  --border: hsl(240, 6%, 17%);
+  --border-menu-mobile: hsl(240, 7%, 68%);
+  --text-color-menu-mobile: hsl(240, 9%, 89%);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 62.5%;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: var(--background)
+}
+
+main {
+  align-items: center;
+  text-align: center;
+}
+
+.wrapper {
+  padding: 8.8rem 4rem;
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8.8rem;
+}
+
+
+/* ---------------- NAVIGATION ---------------- */
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2.6rem;
+}
+
+
+/* ---------------- MAIN ---------------- */
+
+
+main p {
+  color: var(--text-color);
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 4rem;
+  letter-spacing: 0.02rem;
+
+  width: min(29rem, 100%);
+}
+
+main button {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.5rem;
+
+  color: white;
+  
+  border: 1px solid var(--button);
+  border-radius: .6rem;
+
+  background: var(--background-color);
+  width: 17.5rem;
+  height: 3.5rem;
+
+}
+
+main div.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+main h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+main div.title h2 {
+  color: var(--title-color);
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  font-size: 5rem;
+
+}
+
+
+
+/* ---------------- FOOTER ---------------- */
+
+footer img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+footer img:nth-child(2) {
+
+
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
