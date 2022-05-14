@@ -110,25 +110,20 @@ main div.title h2 {
 /* ---------------- FOOTER ---------------- */
 
 div.img-group {
-  position: static;
+  position: sticky;
+  top: 500px;
   width: 100%;
 }
 
 div.img-group img {
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 755px;
-  width: 100vw;
 
-  z-index: 1;
+  width: 100%;
 }
 
-div.img-group img:nth-child(2) {
+div.img-group img:last-child {
   position: absolute;
-  width: 100vw;
-  height: 500px;
-  left: 0;
-  top: 535px;
-
+  bottom: 0;
   z-index: -1;
 }
