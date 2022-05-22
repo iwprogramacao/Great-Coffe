@@ -4,7 +4,8 @@
   --button: hsl(258, 73%, 62%);
   --border: hsl(240, 6%, 17%);
   --border-menu-mobile: hsl(240, 7%, 68%);
-  --text-color-menu-mobile: hsl(240, 9%, 89%);
+  --border-menu-nav: hsla(240, 7%, 68%, 60%);
+  --text-color-menu-mobile: hsl(240, 14%, 1%);
 
   font-family: "Manrope", sans-serif;
   font-size: 62.5%;
@@ -15,115 +16,159 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  background-color: var(--background);
 }
 
-html, body {
-  width: 100%;
-  max-height: 928px;
-}
-
-body {
-  background: var(--background)
-}
 
 main {
-  align-items: center;
-  text-align: center;
-}
-
-.wrapper {
-  padding: 8.8rem 4rem;
-  margin-inline: auto;
-  padding-inline: 2.4rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8.8rem;
 }
 
+.active {
+  visibility: visible;
+  display: flex;
+}
 
-/* ---------------- NAVIGATION ---------------- */
+.inactive {
+  visibility: hidden;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  /* transition: 0.3s; */
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* --------------------- NAVIGATION -------------------- */
 
 
 nav {
+  padding: 26px;
+  background-color: var(--background);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2.6rem;
+  border-bottom: 1px solid var(--border-menu-nav);
 }
 
-
-/* ---------------- MAIN ---------------- */
-
-
-main p {
-  color: var(--text-color);
-  font-size: 3rem;
-  font-weight: normal;
-  line-height: 4rem;
-  letter-spacing: 0.02rem;
-
-  width: min(29rem, 100%);
-}
-
-main button {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  font-weight: 800;
-  line-height: 1.5rem;
-
-  color: white;
-  
-  border: 1px solid var(--button);
-  border-radius: .6rem;
-
-  background: var(--background-color);
-  width: 17.5rem;
-  height: 3.5rem;
-
-}
-
-main div.title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-
-main h1 {
-  color: white;
-  font-weight: 700;
-  font-size: 5rem;
-}
-
-main div.title h2 {
-  color: var(--title-color);
-  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
-  font-size: 5rem;
+nav div {
+  cursor: pointer;
+  display: none;
 
 }
 
 
-
-/* ---------------- FOOTER ---------------- */
-
-div.img-group {
-  position: sticky;
-  top: 500px;
-  width: 100%;
-}
-
-div.img-group img {
-  position: relative;
+ul.nav-list {
+  position: absolute;
+  top: 89px;
   left: 0;
 
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
 }
 
-div.img-group img:last-child {
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
+.nav-list li {
+  display: flex;
+
+  font-size: 1.8rem;
+  font-weight: 400;
+ 
+
+  padding-inline: 3rem;
+  padding-block: 1.7rem;
+  border-bottom: 1px solid var(--border-menu-mobile);
+  opacity: 0.6;
+  z-index: 100;
+}
+
+.nav-list li:hover {
+  border-left: 5px solid var(--button);
+
+}
+
+.nav-list li:hover,
+.nav-list li a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+
+/* --------------------- MAIN -------------------- */
+
+
+p {
+  color: var(--text-color);
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.02rem;
+
+  padding-block: 8.8rem;
+  max-width: 29rem;
+  margin: auto;
+}
+
+button {
+  margin: auto;
+
+  border-radius: .6rem;
+  border: 1px solid var(--button);
+
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  
+  display: flex;
+  gap: 1rem;
+
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.1rem;
+
+}
+
+.title h1 {
+  margin: auto;
+  padding-top: 8rem;
+
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: -0.03rem;
+}
+
+.title p {
+  padding-block: 0;
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  color: #000000;
+  font-size: 5rem;
+  line-height: 68px;
+  max-width: 100%;
+}
+
+div.coffee-logo img {
+  width: 100%;
+  background-color: transparent;
+}
+
+div.coffee-logo {
+  background-image: url(./assets/blur-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+@media (min-width: 900px) {
+
 }
